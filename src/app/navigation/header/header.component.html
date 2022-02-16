@@ -1,0 +1,29 @@
+<mat-toolbar color="accent">
+
+    <div fxHide.gt-xs>
+        <button mat-icon-button (click) = "onToggleSidenav()">
+        <!--Hamburger icon-->
+        <mat-icon>menu</mat-icon>
+        </button>
+    </div>
+
+    <div fxFlex fxLayoutAlign = "flex-start"><a routerLink = "/"><span class = "logo"><img src= "assets/logo.png"></span></a></div>
+
+    <div fxFlex fxLayoutAlign = "center center" *ngIf = "isAuth$ | async" class = "user"> USER:  
+         <span class = "username" fxLayoutAlign = "flex-end" [ngClass]="getUserName()"> {{ username }}</span>
+    </div>
+
+
+    <div fxFlex fxLayout fxLayoutAlign = "flex-end" fxHide.xs>
+        <ul fxLayout fxLayoutGap = "20px" class = "nav-items">
+        <li *ngIf = "!(isAuth$ | async)"><a routerLink = "/signup">Signup</a></li>
+        <li *ngIf = "!(isAuth$ | async)"><a routerLink = "/login">Login</a></li>
+        <li *ngIf = "isAuth$ | async"><a routerLink = "/training">Training</a></li>
+        <li *ngIf = "isAuth$ | async" (click) = "onLogout()"><a>Logout</a></li>
+        <li><a (click)="goToLink('https://accounts.spotify.com/en/login/?continue=https:%2F%2Fopen.spotify.com%2F%3Fl2l%3D1')"> <img class = "spotify" alt="Spotify" src="assets/spotify.png" width="35" > </a></li>
+        <li><a (click)="goToLink('https://www.youtube.com/')"> <img class = "youtube" alt="Youtube" src="assets/youtube.png" width="45"></a></li>
+        </ul>
+    </div>
+
+
+</mat-toolbar>

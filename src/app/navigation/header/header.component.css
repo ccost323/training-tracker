@@ -1,0 +1,55 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active
+ {
+  color: #f48fb1;
+  cursor: pointer;
+}
+.youtube:hover, .spotify:hover {
+  background: #f48fb1
+
+}
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.username {
+  font-style: italic;
+  margin-left: 10px;
+  text-transform: capitalize;
+}
+.username, .user {
+  font-size: 25px;
+}
+
+@media only screen and (min-width: 900px) {
+ .logo img{
+    width: 350px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .logo img {
+    width: 200px;
+  }
+
+  .username, .user {
+    font-size: 20px;
+  }
+}
+  @media only screen and (max-width: 400px) {
+    .logo img {
+      width: 95%;
+    }
+    .username, .user {
+      font-size: 13px;
+    }
+}
+
+

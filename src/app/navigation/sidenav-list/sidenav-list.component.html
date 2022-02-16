@@ -1,0 +1,41 @@
+<mat-nav-list  (click)="onClose()">
+    <a mat-list-item routerLink="/signup" *ngIf = "!(isAuth$ | async)">
+    <mat-icon class = "nav-icon">person_add</mat-icon>
+    <span>Signup</span>
+    </a>
+
+    <div class = "line" *ngIf = "!(isAuth$ | async)"></div>
+
+    <a mat-list-item routerLink="/login" *ngIf = "!(isAuth$ | async)">
+        <mat-icon class = "nav-icon">insert_emoticon</mat-icon>
+        <span>Login</span>
+        </a>
+
+    <div class = "line" *ngIf = "!(isAuth$ | async)"></div>
+
+    <a mat-list-item routerLink="/training" *ngIf = "isAuth$ | async">
+        <mat-icon class = "nav-icon">fitness_center</mat-icon>
+        <span>Training</span>
+        </a>
+    
+    <div class = "line" *ngIf = "isAuth$ | async"></div>
+
+<mat-list-item *ngIf = "isAuth$ | async" (click) = "onLogout()">
+    <button mat-icon-button>
+        <a>
+        <mat-icon class="nav-icon">logout</mat-icon>
+        <span>Logout</span>
+        </a>
+    </button>
+</mat-list-item>
+
+    <div class = "line"></div>
+    
+    <div fxLayoutAlign = "center">
+    <a class = "spotify" (click)="goToLink('https://accounts.spotify.com/en/login/?continue=https:%2F%2Fopen.spotify.com%2F%3Fl2l%3D1')"> <img class = "spotify" alt="Spotify" src="assets/spotify2.png" width="35"></a>
+
+ 
+    <a class = "youtube" (click)="goToLink('https://www.youtube.com/')"> <img class = "youtube" alt="Youtube" src="assets/youtube_hover.png" width="45"></a>
+    </div>
+
+</mat-nav-list>

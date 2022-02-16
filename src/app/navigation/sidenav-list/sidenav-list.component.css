@@ -1,0 +1,34 @@
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover,
+a:active {
+  color: #f48fb1;
+}
+
+.nav-items {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-icon {
+  margin-right: 10px;
+}
+
+.spotify {
+  margin-left: -10px;
+  margin-right: 10px;
+}
+
+
+
+.line {
+  border-bottom: 2px solid #e91e63;
+}
+
+mat-nav-list a {
+  margin: 10px 0 10px 0;
+}

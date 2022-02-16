@@ -1,0 +1,17 @@
+.mat-label {
+  width: 300px;
+}
+
+.login-card {
+  max-width: 400px;
+  padding: 30px;
+}
+
+section {
+  margin-top: 10px;
+}
+
+.mat-card-title {
+  margin-bottom: 40px;
+  color: #e91e63;
+}
